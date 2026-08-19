@@ -37,6 +37,7 @@ import {
   HERO_INTRO_PREFIX,
   HERO_INTRO_SUFFIX,
   HERO_CTA,
+  RESUME_DOWNLOAD_NAME,
   RESUME_URL,
   HERO_TITLE,
   NAME_INITIALS,
@@ -86,8 +87,7 @@ function App() {
             <Button onClick={() => scrollTo('about')} sx={{ color: 'inherit', textTransform: 'none', fontWeight: 400 }}>About</Button>
             <Button
               href={RESUME_URL}
-              target="_blank"
-              rel="noreferrer"
+              download={RESUME_DOWNLOAD_NAME}
               variant="text"
               sx={{ color: 'inherit', textTransform: 'none', fontWeight: 400 }}
             >
@@ -267,7 +267,7 @@ function App() {
                 </Stack>
               </Box>
             ))}
-            <Button className="resume-link" endIcon={<ArrowOutwardIcon />} href={RESUME_URL} target="_blank" rel="noreferrer">
+            <Button className="resume-link" endIcon={<ArrowOutwardIcon />} href={RESUME_URL} download={RESUME_DOWNLOAD_NAME}>
               Download resume
             </Button>
           </Box>
